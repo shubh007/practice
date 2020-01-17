@@ -12,6 +12,12 @@ import java.util.Map;
 /**
  * @author Shubham
  */
+
+/*
+* Print all full binary tree with n nodes
+* https://leetcode.com/problems/all-possible-full-binary-trees/
+*/
+
 public class TotalFullBinaryTree {
 
     public List<BNode> getAllFullBinaryTreesOfNNodes(int n){
