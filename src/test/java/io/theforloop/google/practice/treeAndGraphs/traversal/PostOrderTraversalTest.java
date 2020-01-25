@@ -1,6 +1,4 @@
-package io.theforloop.google.practice.tree.traversal;
-
-import static org.junit.Assert.*;
+package io.theforloop.google.practice.treeAndGraphs.traversal;
 
 import io.theforloop.google.practice.common.Data;
 import java.util.List;

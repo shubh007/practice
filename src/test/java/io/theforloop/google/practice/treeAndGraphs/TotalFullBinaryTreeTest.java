@@ -1,4 +1,4 @@
-package io.theforloop.google.practice.tree;
+package io.theforloop.google.practice.treeAndGraphs;
 
 import io.theforloop.google.practice.common.BNode;
 import io.theforloop.google.practice.utils.BTreeUtils;
@@ -6,8 +6,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Shubham
