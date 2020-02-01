@@ -4,7 +4,9 @@ import io.theforloop.google.practice.common.BNode;
 import io.theforloop.google.practice.common.Data;
 import io.theforloop.google.practice.utils.BTreeUtils;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.Stack;
 
 /**
@@ -39,7 +41,25 @@ public class PostOrderTraversal {
             return result;
         }
         Stack<BNode> stack  = new Stack<>();
-        
+        stack.push(root);
+        while (root.getLeft()!=null){
+            root = root.getLeft();
+            stack.push(root);
+        }
+        Set<BNode> roots = new HashSet<>();
+        while (!stack.empty()){
+            BNode peek = stack.peek();
+            if(peek.getLeft()==null && peek.getRight()==null ){
+                result.add(peek.getData());
+                stack.pop();
+                continue;
+            }
+            if(peek.getLeft() == null){
+                result.add(peek.getData());
+                stack.pop();
+            }
+
+        }
         return result;
     }
 
