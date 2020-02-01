@@ -1,4 +1,4 @@
-package io.theforloop.google.practice.tree.traversal;
+package io.theforloop.google.practice.treeAndGraphs.traversal;
 
 
 import io.theforloop.google.practice.common.Data;

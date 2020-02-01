@@ -1,4 +1,4 @@
-package io.theforloop.google.practice.tree;
+package io.theforloop.google.practice.treeAndGraphs;
 
 import io.theforloop.google.practice.common.BNode;
 import io.theforloop.google.practice.common.Data;
@@ -14,7 +14,7 @@ import java.util.Map;
  */
 
 /*
-* Print all full binary tree with n nodes
+* Print all full binary treeAndGraphs with n nodes
 * https://leetcode.com/problems/all-possible-full-binary-trees/
 */
 
