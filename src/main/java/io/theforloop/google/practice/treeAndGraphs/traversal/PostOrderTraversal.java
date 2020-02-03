@@ -40,27 +40,22 @@ public class PostOrderTraversal {
         if(root == null){
             return result;
         }
-        Stack<BNode> stack  = new Stack<>();
-        stack.push(root);
-        while (root.getLeft()!=null){
-            root = root.getLeft();
-            stack.push(root);
+        Stack<BNode> finalStack  = new Stack<>();
+        Stack<BNode> oprStack  = new Stack<>();
+        oprStack.add(root);
+        while (!oprStack.isEmpty()){
+            BNode currNode = oprStack.pop();
+            finalStack.add(currNode);
+            if(currNode.getLeft()!=null){
+                oprStack.add(currNode.getLeft());
+            }
+            if(currNode.getRight()!=null){
+                oprStack.add(currNode.getRight());
+            }
         }
-        Set<BNode> roots = new HashSet<>();
-        while (!stack.empty()){
-            BNode peek = stack.peek();
-            if(peek.getLeft()==null && peek.getRight()==null ){
-                result.add(peek.getData());
-                stack.pop();
-                continue;
-            }
-            if(peek.getLeft() == null){
-                result.add(peek.getData());
-                stack.pop();
-            }
-
+        while (!finalStack.isEmpty()){
+            result.add(finalStack.pop().getData());
         }
         return result;
     }
-
 }
